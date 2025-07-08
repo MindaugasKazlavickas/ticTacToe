@@ -14,17 +14,20 @@
 
     <div class="coreContainer">
         <div class="buttonContainer">
-            BIG BUTTONS
+            TIC TAC TOE
         </div>
-        <div class="boardContainer">
-            <div class="top left">a</div><div class="top mid">d</div><div class="top right">g</div>
-            <div class="middle left">b</div><div class="middle mid">e</div><div class="middle right">h</div>
-            <div class="bottom left">c</div><div class="bottom mid">f</div><div class="bottom right">i</div>
+        <div class="boardContainer" id="board">
+            <div class="square top left" id="square0"></div><div class="square top mid" id="square1"></div><div class="square top right" id="square2"></div>
+            <div class="square middle left" id="square3"></div><div class="square middle mid" id="square4"></div><div class="square middle right" id="square5"></div>
+            <div class="square bottom left" id="square6"></div><div class="square bottom mid" id="square7"></div><div class="square bottom right" id="square8"></div>
         </div>
         <div class="scoreContainer">
-            <div id="user"> X / Y </div>
-            <div id="computer"> M / N </div>
+            <div id="score">x: 0 / 0 :o</div>
+            <button id="restart"> Restart? </button>
         </div>
+        
     </div>
+    <div id="winScreen"> <h2>YOU WIN</h2> </div>
+    
 </body>
 </html>
