@@ -3,7 +3,7 @@ const board = document.getElementById('board')
 const squares = document.querySelectorAll('.square')
 const players = ['x', 'o']
 const count = [0, 0]
-let turn0 = true
+let turn = true
 let currentPlayer = players[0]
 let win = false
 const restart = document.getElementById('restart')
@@ -22,16 +22,16 @@ const winConditions = [
 squares.forEach((square) => {
     square.addEventListener('click', function () {
         if (square.innerText === '' && win === false) {
-            if (turn0) {
+            if (turn) {
                 square.innerText = players[0];
-                turn0 = false;
+                turn = false;
                 square.disabled = true;
                 checkWinner(currentPlayer);
                 checkDraw();
                 currentPlayer = players[1];
             } else {
                 square.innerText = players[1];
-                turn0 = true;
+                turn = true;
                 square.disabled = true;
                 checkWinner(currentPlayer);
                 checkDraw();
